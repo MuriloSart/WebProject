@@ -18,6 +18,10 @@
             <a href=" cadastroJogo.php">Cadastrar Jogo</a>
         </div>
 
+        <div>
+            <a href=" listaGeral.php">Lista de Clientes</a>
+        </div>
+
     </nav>
 
     <footer>
