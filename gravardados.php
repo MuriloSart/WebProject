@@ -1,5 +1,6 @@
 <?php
     include 'conexao.php';
+    include 'config.php';
     $cpf = $_POST['txtCPF'];
     $nome=$_POST['txtNome'];
     $email=$_POST['txtEmail'];
@@ -10,6 +11,7 @@
 
     if ($conn->query($sql) === TRUE) {
         echo "Cliente gravado com sucesso";
+        $logado = true;
     } else {
         echo "Erro: " . $sql . "<br>" . $conn->error;
     }

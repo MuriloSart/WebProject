@@ -37,7 +37,7 @@
 
                     <tr>
                         <td>Telefone</td>
-                        <td><input type="tel" name="txtTel" placeholder="(00) 0000-0000"></td>
+                        <td><input type="tel" name="txtTel" placeholder="(00) 0000-0000" required></td>
                     </tr>
 
                     <tr>
