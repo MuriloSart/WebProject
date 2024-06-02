@@ -17,9 +17,9 @@
             <h1>Cadastro de Jogo</h1>
         </div>
         <div id="campos">
-            <form method="post" action="gravardados.php">
+            <form method="post" action="gravardados_jogo.php">
                 <table style="border:'0';">
-
+            
                     <tr>
                         <td>Título</td>
                         <td><input type="text" name="txtTitulo" required></td>
@@ -27,7 +27,7 @@
 
                     <tr>
                         <td>Sinopse</td>
-                        <td><input type="text" name="txtNome" required></td>
+                        <td><input type="text" name="txtSinopse" required></td>
                     </tr>
 
                     <tr>
@@ -38,12 +38,6 @@
                     <tr>
                         <td>Público alvo</td>
                         <td><input type="text" name="txtPublico" required></td>
-                    </tr>
-
-                    
-                    <tr>
-                        <td>Data de Lançamento</td>
-                        <td><input type="date" name="txtData" required></td>
                     </tr>
 
                     <tr>

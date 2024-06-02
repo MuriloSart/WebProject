@@ -6,10 +6,12 @@ $db_user="root";
 $db_pass="";
 
 //Conexao
-try{
+try
+{
     $conn=mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 }
-catch (\Throwable $th) {
+catch (\Throwable $th) 
+{
     throw $th;
 }
 ?>
