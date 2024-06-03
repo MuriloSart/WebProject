@@ -13,9 +13,14 @@
 
     <header>
         <?php
-            if ($_SESSION['login']) 
-                echo "Você está logado.";
-            else 
+            if(isset($_SESSION['login']))
+            {
+                if ($_SESSION['login']) 
+                    echo "Você ". $_SESSION['nome'] . " está logado.";
+                else
+                    echo "Você não está logado.";
+            }
+            else
                 echo "Você não está logado.";
         ?>
     </header>
@@ -36,6 +41,10 @@
         <div>
             <a href=" listaGeral.php">Lista de Usuários</a>
         </div>
+
+        <form method="post" action="logout.php">
+            <button type="submit" name="logout" value="executar">Logout</button>
+        </form>
 
     </nav>
 
