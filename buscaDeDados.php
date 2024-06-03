@@ -19,6 +19,8 @@
     $result = $stmt->get_result();
     $cliente = $result->fetch_assoc();
 
+    $_SESSION['inativo'] = $cliente['inativo'];
+    
     if (!$cliente) {
         echo "Cliente não encontrado.";
         exit;

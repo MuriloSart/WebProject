@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/estilo.css">
     <title>Formulário de Cliente</title>
 </head>
 <body>
@@ -22,6 +23,22 @@
         <input type="text" id="telefone" name="txtTel" value="<?php echo isset($cliente['telefone']) ? htmlspecialchars($cliente['telefone']) : ''; ?>"><br><br>
 
         <input type="submit" value="Atualizar">
+    </form>
+
+    <form method="post" action="deixarInativo.php">
+            <br>
+
+            <?php if(isset($_SESSION['inativo']))
+            {  ?>
+
+                <label for="nome">Inatividade:</label><br>
+                <input type="submit" name=" " value="
+                <?php   if ($_SESSION['inativo']) 
+                            echo "Ativar Conta.";
+                        else
+                            echo "Desativar Conta."; ?>">
+            <?php 
+            } ?>
     </form>
 </body>
 </html>
