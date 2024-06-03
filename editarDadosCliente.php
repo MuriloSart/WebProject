@@ -4,21 +4,17 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") 
     {
-        // Obter os dados do formulário
+        $id = $_SESSION['id'];
         $nome = $_POST['txtNome'];
         $cpf_cnpj = $_POST['txtCPF'];
         $email = $_POST['txtEmail'];
         $telefone = $_POST['txtTel'];
-    
-        // Preparar a consulta SQL
-        $stmt = $conn->prepare("INSERT INTO clientes (nome, cpf_cnpj, email, telefone) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $nome, $cpf_cnpj, $email, $telefone);
-        
-        //Registrando o ID do cliente
 
+        $stmt = $conn->prepare("UPDATE clientes SET nome = ?, cpf_cnpj = ?, email = ?, telefone = ? WHERE id = ?");
+        $stmt->bind_param("ssssi", $nome, $cpf_cnpj, $email, $telefone, $id);
+        
         try 
         {
-            // Executar a consulta
             if ($stmt->execute()) 
             {
                 echo "Novo registro criado com sucesso";
@@ -26,10 +22,7 @@
         } 
         catch (mysqli_sql_exception $e) 
         {
-            if ($conn->errno == 1062)
-                echo "Erro: O valor CPF/CNPJ ou Email já está registrados.";
-            else 
-                echo "Erro: " . $e->getMessage();
+            echo "Erro: " . $e->getMessage();
         }
     
         $stmt->close();

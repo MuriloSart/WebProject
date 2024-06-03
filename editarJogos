@@ -1,0 +1,27 @@
+<?php
+    include 'buscaDeJogos.php';
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulário de Cliente</title>
+</head>
+<body>
+    <h2>Formulário de Cliente</h2>
+    <form method="POST" action="buscaDeJogos.php">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="txtTitulo" value="<?php echo isset($cliente['titulo']) ? htmlspecialchars($cliente['titulo']) : ''; ?>"><br><br>
+
+        <label for="sinopse">Sinopse:</label>
+        <textarea id="sinopse" name="txtSinopse"><?php echo isset($cliente['sinopse']) ? htmlspecialchars($cliente['sinopse']) : ''; ?></textarea><br><br>
+
+        <label for="genero">Gênero:</label>
+        <input type="text" id="genero" name="txtGenero" value="<?php echo isset($cliente['genero']) ? htmlspecialchars($cliente['genero']) : ''; ?>"><br><br>
+
+        <label for="publico">Público Alvo:</label>
+        <input type="text" id="publico" name="txtPublico" value="<?php echo isset($cliente['publico_alvo']) ? htmlspecialchars($cliente['publico_alvo']) : ''; ?>"><br><br>
+
+        <input type="submit" value="Atualizar">
+    </form>
+</body>
+</html>

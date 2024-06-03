@@ -46,6 +46,10 @@
             <a href=" listaJogos.php">Lista de Jogos</a>
         </div>
 
+        <div>
+            <a href=" editarCliente.php">Configurações</a>
+        </div>
+
         <form method="post" action="logout.php">
             <button type="submit" name="logout" value="executar">Logout</button>
         </form>

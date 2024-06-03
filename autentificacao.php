@@ -20,10 +20,11 @@
                 if($user['inativo'] == 0)
                 {
                     $_SESSION['login'] = true;
-                    $_SESSION['email'] = $email;
-                    $_SESSION['cpf_cnpj'] = $cpf_cnpj;
-                    $_SESSION['nome'] = $user['nome'];
                     $_SESSION['id'] = $user['id'];
+                    $_SESSION['nome'] = $user['nome'];
+                    $_SESSION['cpf_cnpj'] = $cpf_cnpj;
+                    $_SESSION['email'] = $email;
+                    $_SESSION['telefone'] = $user['telefone'];
                     header("Location: index.php");
                 }
                 else 
