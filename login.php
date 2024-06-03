@@ -21,7 +21,7 @@
             <h1>Login</h1>
         </div>
         <div id="campos">
-            <form method="GET" action="autentificacao.php">
+            <form method='POST' action="autentificacao.php">
                 <table style="border:'0';">
                     <tr>
                         <td>Email</td>
