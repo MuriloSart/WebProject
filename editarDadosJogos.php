@@ -4,7 +4,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") 
     {
-        $id = 1;
+        $id =  $_POST['id'];
         $titulo = $_POST['txtTitulo'];
         $sinopse = $_POST['txtSinopse'];
         $genero = $_POST['txtGenero'];
@@ -12,7 +12,7 @@
 
         $stmt = $conn->prepare("UPDATE jogos SET titulo = ?, sinopse = ?, genero = ?, publico_alvo = ? WHERE id = ?");
         $stmt->bind_param("ssssi", $titulo, $sinopse, $genero, $publico_alvo, $id);
-        
+
         try 
         {
             if ($stmt->execute()) 

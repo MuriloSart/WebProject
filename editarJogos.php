@@ -4,13 +4,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="css/estilo.css">
     <title>Jogos Postados</title>
 </head>
 <body>
     <h1>Jogos Postados</h1>
+    
 
-    <form method="POST" action="editarDadosJogos.php">
-        <?php foreach ($jogos as $jogo):?> 
+    <?php foreach ($jogos as $jogo):?> 
+    <form class = 'form-border' method="POST" action="editarDadosJogos.php">
   
         <h2><?php echo $jogo['titulo'];  ?></h2>
         
@@ -27,10 +29,13 @@
 
         <label for="publico">Público Alvo:</label>
         <input type="text" id="publico" name="txtPublico" value="<?php echo htmlspecialchars($jogo['publico_alvo']); ?>"><br><br>
-        <?php endforeach; ?>
-        
+
         <input type="submit" value="Atualizar">
+        
     </form>
+    <?php endforeach; ?>
+    <br>
+    <h3>Só pode atualizar um jogo de cada vez</h3>
     <hr>
 
 </body>
