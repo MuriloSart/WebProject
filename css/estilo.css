@@ -1,5 +1,19 @@
+div {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: auto;
+    border: 0px;
+    position: relative;
+}
+
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 1rem;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #fff7f1;
@@ -42,14 +56,18 @@ footer {
 }
 
 table {
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     margin-top: 1rem;
+    margin-left: 1rem;
 }
 
 table, th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #a8a8a8;
     padding: 0.5rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: auto;
 }
 
 th {
@@ -57,13 +75,13 @@ th {
 }
 
 form{
-    padding: 20px;
+    padding: 10px;
     border: 1px solid black;
     margin : 10px;
     text-align: left;
-    width: 400px;
+    width: 500px;
 }
 
 form input, textarea{
-    width: 100%;
+    width: 80%;
 }
