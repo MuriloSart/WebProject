@@ -1,11 +1,31 @@
-# WebProject
- Register Games Site Prototype
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 03, 2024 at 08:07 AM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
-# Baixe o XAMPP e crie o banco de dados para utilizar
- Para que haja algo com que o banco se conecte de forma correta, por favor, utilize o seguinte código SQL:
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
-# Crie o banco de dados:
 
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `cliente_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `clientes`
+--
 CREATE DATABASE cliente_db;
 
 USE cliente_db;

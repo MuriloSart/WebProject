@@ -26,29 +26,61 @@
     </header>
 
     <nav>
-        <div>
-            <a href=" login.php">Logar</a>
-        </div>
+        
+        
+        <?php
+        if (!isset($_SESSION['login']) || !$_SESSION['login']) {
+            ?>
+            <br>
+            <div>
+                <a href="login.php">Logar</a>
+            </div>
+            
+        <br>
 
         <div>
             <a href=" cadastroCliente.php">Cadastrar-se como Cliente</a>
         </div>
 
+        <?php
+        }
+        ?>
+
+        <?php
+            if (isset($_SESSION['login']) && $_SESSION['login']) {
+        ?>
+        <br>
         <div>
             <a href=" cadastroJogo.php">Cadastrar seu Jogo</a>
         </div>
+
+        <br>
+        
+        <div>
+            <a href=" editarCliente.php">Configurações</a>
+        </div>
+
+        <br>
+
+        <div>
+            <a href=" editarJogos.php">Jogos Postados</a>
+        </div>
+        <?php
+        }
+        ?>
+        <br>
 
         <div>
             <a href=" listaGeral.php">Lista de Usuários</a>
         </div>
 
+        <br>
+
         <div>
             <a href=" listaJogos.php">Lista de Jogos</a>
         </div>
 
-        <div>
-            <a href=" editarCliente.php">Configurações</a>
-        </div>
+        <br>
 
         <form method="post" action="logout.php">
             <button type="submit" name="logout" value="executar">Logout</button>

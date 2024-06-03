@@ -1,15 +1,28 @@
 <?php
-    // Buscar os dados do cliente
-    $sql1 = "SELECT * FROM jogos WHERE foreign_key = ?";
-    $stmt = $conn->prepare($sql1);
+    session_start();
+    include 'conexao.php';
+
+    if (!isset($_SESSION['login']) || $_SESSION['login'] !== true) 
+    {
+        echo "Você precisa estar logado";
+        print("<br><a href='index.php'>Menu</a>");
+        print("<br><a href='login.php'>Login</a>");
+        exit;
+    }
+
+    $id_cliente = $_SESSION['id'];
+
+    $sql = "SELECT * FROM jogos WHERE foreign_key = ?";
+    $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id_cliente);
     $stmt->execute();
-    $result1 = $stmt->get_result();
-    $jogo = $result1->fetch_assoc();
+    $result = $stmt->get_result();
+    $jogos = $result->fetch_all(MYSQLI_ASSOC);
 
-    if (!$jogo)
+    if (!$jogos)
     {
         echo "Jogos não encontrados.";
+        print("<br><a href=index.php>Menu</a>");
         exit;
     }
 

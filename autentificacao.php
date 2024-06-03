@@ -35,13 +35,13 @@
             else 
             {
                 echo "Email ou CPF/CNPJ inválido(s).";
-                header("Location: login.php");
+                print("<br><a href=login.php>Logar</a>");
             }
         }
         else 
         {
             echo "Por favor, preencha todos os campos.";
-            header("Location: login.php");
+            print("<br><a href=login.php>Logar</a>");
         }
     }
 
