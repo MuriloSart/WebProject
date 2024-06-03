@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -8,7 +9,7 @@
     <!-- dados do banco -->
     <?php
         include_once("conexao.php");
-        $sql="SELECT * FROM clientes";
+        $sql="SELECT * FROM jogos";
 ?>
 </head>
 <header>
@@ -24,13 +25,14 @@
     </nav>
 
     <section>
-        <h1>Lista Geral de Clientes</h1>
+        <h1>Lista Geral de Jogos</h1>
         <table>
             <tr>
-                <td>Nome</td>
-                <td>CPF/CNPJ</td>
-                <td>Email</td>
-                <td>Telefone</td>
+                <td>Titulo</td>
+                <td>Sinopse</td>
+                <td>Data de Registro</td>
+                <td>Genero</td>
+                <td>Publico Alvo</td>
             </tr>
             <!-- exibir os dados da tabela do banco de dados-->
             <?php 
@@ -39,10 +41,11 @@
             {
             ?>
            <tr>
-               <td><?php echo $linha["nome"]; ?></td>
-                <td><?php echo $linha["cpf_cnpj"]; ?></td>
-                <td><?php echo $linha["email"]; ?></td>
-                <td><?php echo $linha["telefone"]; ?></td>
+               <td><?php echo $linha["titulo"]; ?></td>
+                <td><?php echo $linha["sinopse"]; ?></td>
+                <td><?php echo $linha["data_registro"]; ?></td>
+                <td><?php echo $linha["genero"]; ?></td>
+                <td><?php echo $linha["publico_alvo"]; ?></td>
             </tr>
             <?php } ?>
 

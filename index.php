@@ -16,7 +16,7 @@
             if(isset($_SESSION['login']))
             {
                 if ($_SESSION['login']) 
-                    echo "Você ". $_SESSION['nome'] . " está logado.";
+                    echo "Você está logado como: ". $_SESSION['nome'] . " ";
                 else
                     echo "Você não está logado.";
             }
@@ -40,6 +40,10 @@
 
         <div>
             <a href=" listaGeral.php">Lista de Usuários</a>
+        </div>
+
+        <div>
+            <a href=" listaJogos.php">Lista de Jogos</a>
         </div>
 
         <form method="post" action="logout.php">

@@ -6,6 +6,9 @@
     <title>Cadastro de Médico</title>
     <link rel="stylesheet" href="./css/estilo.css">
 </head>
+<header>
+<?php include('../WebProject/header.php'); ?>
+</header>
 <body>
     <nav>
         <div>
