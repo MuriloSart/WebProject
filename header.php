@@ -1,4 +1,5 @@
 <?php
+            echo "Virtual Games <br><br>";
             if(isset($_SESSION['login']))
             {
                 if ($_SESSION['login']) 
