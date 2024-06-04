@@ -11,7 +11,6 @@
 
     $id_cliente = $_SESSION['id'];
 
-    // Buscar os dados do cliente
     $sql = "SELECT * FROM clientes WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->bind_param("i", $id_cliente);

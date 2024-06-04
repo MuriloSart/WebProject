@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 03, 2024 at 08:07 AM
+-- Generation Time: Jun 04, 2024 at 04:00 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -12,20 +12,6 @@ START TRANSACTION;
 SET time_zone = "+00:00";
 
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `cliente_db`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `clientes`
---
 CREATE DATABASE cliente_db;
 
 USE cliente_db;
@@ -44,13 +30,15 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id`, `nome`, `cpf_cnpj`, `email`, `telefone`, `inativo`) VALUES
-(2, 'Gustavo Ferrari', '87456544174', 'ferrarinha@gmail.com', '119521341', 0),
+(2, 'Gustavo Ferrari', '87456544174', 'ferrarinha@gmail.com', '119521341', 1),
 (6, 'Gustavo Rebecchi', '84456245', 'gustavorebecchi@gmail.com', '1194463345', 0),
 (7, 'Kelvin', '1236547894', 'kelvinho@gmail.com', '11952367777', 0),
 (12, 'lucas', '844533124', 'lucas@hotmail.com', '11950717700', 0),
 (13, 'otavio', '2332323494', 'otavio@hotmail.com', '11054839944', 0),
 (14, 'murilo sartori', '123123123124', 'muriloasrtori@gmail.com', '11956878822', 0),
-(20, 'murilo sartori', '312321312', 'muriloaasartori@gmail.com', '11956878822', 0);
+(20, 'murilo sartori', '312321312', 'muriloaasartori@gmail.com', '11956878822', 0),
+(35, 'Murilo Sartori', '305737813352', 'muriloasartori@gmail.com', '11950717700', 0),
+(37, 'murilosarz', '12365478294', 'muriloasartorii@gmail.com', '11350717700', 0);
 
 -- --------------------------------------------------------
 
@@ -73,9 +61,11 @@ CREATE TABLE `jogos` (
 --
 
 INSERT INTO `jogos` (`id`, `foreign_key`, `titulo`, `sinopse`, `data_registro`, `genero`, `publico_alvo`) VALUES
-(1, 2, 'Counter Strike', 'Jogo de Tiro que só velho gosta', '2024-06-03', 'Tiro', '18+'),
+(1, 2, 'Counter Strike', 'Jogo de tiro que só velho gosta', '2024-06-03', 'Tiro', '18+'),
 (2, 2, 'Valorant', 'Jogo bom pra caramba, só gente braba joga', '2024-06-03', 'Tiro', '18+'),
-(3, 6, 'New World', 'MMO- RPG ruim que promete muito e entrega pouco', '2024-06-03', 'MMO-RPG', 'gente tonta');
+(3, 6, 'New World', 'MMO- RPG ruim que promete muito e entrega pouco', '2024-06-03', 'MMO-RPG', 'gente tonta'),
+(4, 2, 'League of Legends', 'Jogo de fadinha', '2024-06-04', 'fada', 'livre'),
+(5, 37, 'Rain World', 'nao sei', '2024-06-04', 'desconhecido', 'pessoas');
 
 --
 -- Indexes for dumped tables
@@ -103,13 +93,13 @@ ALTER TABLE `jogos`
 -- AUTO_INCREMENT for table `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `jogos`
 --
 ALTER TABLE `jogos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
