@@ -82,6 +82,16 @@ form{
     width: 500px;
 }
 
+.form-pesquisa {
+    text-align: center;
+    width: 500px;
+    border: none; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0 auto; 
+}
+
 form input, textarea{
     width: 80%;
 }

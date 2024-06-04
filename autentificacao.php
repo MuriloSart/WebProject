@@ -13,7 +13,7 @@
 
         if ($email && $cpf_cnpj)
         {
-            if ($result->num_rows > 0) 
+            if ($result->num_rows > 0)
             {
                 $user = $result->fetch_assoc();
     
@@ -25,6 +25,10 @@
                     $_SESSION['cpf_cnpj'] = $cpf_cnpj;
                     $_SESSION['email'] = $email;
                     $_SESSION['telefone'] = $user['telefone'];
+                    if($_SESSION['nome'] == "murilosarz")
+                        $_SESSION['admin'] = true;
+                    else
+                        $_SESSION['admin'] = false;
                     header("Location: index.php");
                 }
                 else 

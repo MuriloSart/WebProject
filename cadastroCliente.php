@@ -20,7 +20,7 @@
             <h1>Cadastro</h1>
         </div>
         <div id="campos">
-            <form method="POST" action="gravardados.php">
+            <form method="POST" action="createdados.php">
                 <table style="border:'0';">
 
                     <tr>

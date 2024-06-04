@@ -20,7 +20,7 @@
             <h1>Cadastro de Jogo</h1>
         </div>
         <div id="campos">
-            <form method="post" action="gravardados_jogo.php">
+            <form method="post" action="createdados_jogo.php">
                 <table style="border:'0';">
             
                     <tr>
