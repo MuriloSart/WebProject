@@ -1,5 +1,5 @@
 # WebProject
- Register Games Site Prototype
+ Site para registro de Jogos
 
 # Baixe o XAMPP e crie o banco de dados para utilizar
  Para que haja algo com que o banco se conecte de forma correta, por favor, utilize o seguinte código SQL:
@@ -58,10 +58,6 @@ INSERT INTO `jogos` (`id`, `foreign_key`, `titulo`, `sinopse`, `data_registro`, 
 (3, 6, 'New World', 'MMO- RPG ruim que promete muito e entrega pouco', '2024-06-03', 'MMO-RPG', 'gente tonta');
 
 --
--- Indexes for dumped tables
---
-
---
 -- Indexes for table `clientes`
 --
 ALTER TABLE `clientes`
@@ -74,10 +70,6 @@ ALTER TABLE `clientes`
 --
 ALTER TABLE `jogos`
   ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
 
 --
 -- AUTO_INCREMENT for table `clientes`
